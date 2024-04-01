@@ -13,12 +13,16 @@ class CustomPaintExample extends StatefulWidget {
 class _CustomPaintExampleState extends State<CustomPaintExample> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: CustomPaint(
-          painter: DemoPainter(),
-        ),
-      ) ,
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.only(top: 80.0),
+          child: CustomPaint(
+            child: Container(),
+            painter: DemoPainter(),
+          ),
+        ) ,
+      ),
     );
   }
 }

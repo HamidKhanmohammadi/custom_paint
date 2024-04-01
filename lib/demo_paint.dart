@@ -4,19 +4,19 @@ import 'package:flutter/material.dart';
 class DemoPainter extends CustomPainter {
 
   var paintVar = Paint()
-    ..color = Colors.yellow
-    ..strokeWidth = 20.0;
+    ..color = Colors.black
+    ..strokeWidth = 200.0;
 
 
   @override
   void paint(Canvas canvas, Size size) {
     var center = size/2;
     var paint = Paint()..color = Colors.black;
-    canvas.drawCircle(Offset(center.width, center.height), 10.0, paint);
+    canvas.drawCircle(Offset(center.width, center.height), 10.0, paintVar);
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+  bool shouldRepaint(CustomPainter oldDelegate) {
     // TODO: implement shouldRepaint
     throw UnimplementedError();
   }
